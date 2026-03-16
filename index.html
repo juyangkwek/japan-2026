@@ -27,14 +27,14 @@ nav {
   background: rgba(245,241,235,0.96); backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 2rem; height: 52px;
+  padding: 0 1.5rem; height: 52px;
 }
-.nav-brand { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-transform: uppercase; }
-.nav-links { display: flex; gap: 0; }
+.nav-brand { font-family: var(--serif); font-size: 1rem; letter-spacing: 0.18em; color: var(--ink); text-transform: uppercase; white-space: nowrap; line-height: 1; flex-shrink: 0; }
+.nav-links { display: flex; gap: 0; flex-wrap: nowrap; align-items: center; }
 .nav-links a {
-  color: var(--gray); text-decoration: none; font-size: 0.72rem; font-weight: 400;
-  padding: 0.3rem 0.6rem; letter-spacing: 0.08em; text-transform: uppercase;
-  transition: color 0.2s;
+  color: var(--gray); text-decoration: none; font-size: 0.61rem; font-weight: 400;
+  padding: 0.3rem 0.32rem; letter-spacing: 0.05em; text-transform: uppercase;
+  transition: color 0.2s; white-space: nowrap;
 }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a.ky { color: var(--ky-mid); }
@@ -339,8 +339,8 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
     <a href="#d1" class="ky">D1</a><a href="#d2" class="ky">D2</a><a href="#d3" class="ky">D3</a><a href="#d4" class="ky">D4</a>
     <a href="#tokyo" class="tk">Tokyo</a>
     <a href="#d5" class="tk">D5</a><a href="#d6" class="tk">D6</a><a href="#d7" class="tk">D7</a><a href="#d8" class="tk">D8</a><a href="#d9" class="tk">D9</a>
-    <a href="#alt-acts">Alt. Activities</a>
-    <a href="#alt-restaurants">Alt. Restaurants</a>
+    <a href="#alt-acts">Alt.&thinsp;Acts</a>
+    <a href="#alt-restaurants">Alt.&thinsp;Dining</a>
     <a href="#phrases">Phrases</a>
     <a href="#appendix">Appendix</a>
   </div>
@@ -380,6 +380,7 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
           <span class="tag ky">Gion District</span>
           <span class="tag ky">Fushimi Inari</span>
           <span class="tag ky">Arashiyama</span>
+          <span class="tag ky">Ryoan-ji</span>
           <span class="tag ky">Kinkaku-ji</span>
           <span class="tag ky">Pontocho</span>
         </div>
@@ -390,7 +391,7 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
       <div class="ov-body">
         <div class="ov-city tk">東京 Tokyo</div>
         <div class="ov-dates">22 – 26 June &nbsp;·&nbsp; 4 Days &nbsp;·&nbsp; Hoshinoya + Celestine Ginza</div>
-        <p class="ov-text">The electric metropolis — where ancient shrines coexist with neon-lit crossings and cutting-edge digital art. Immerse in every contrast Tokyo has to offer across five unforgettable days.</p>
+        <p class="ov-text">The electric metropolis — where ancient shrines coexist with neon-lit crossings and cutting-edge digital art. Immerse in every contrast Tokyo has to offer across four unforgettable days.</p>
         <div class="tags">
           <span class="tag tk"><a href="https://planets.teamlab.art/tokyo/" target="_blank">teamLab Planets</a></span>
           <span class="tag tk"><a href="https://www.meijijingu.or.jp/en/" target="_blank">Meiji Jingu</a></span>
@@ -417,151 +418,173 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
   <div class="sect-title">Flight Details</div>
   <div class="rule"></div>
 
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; align-items:start">
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0 1.5rem; align-items:stretch">
 
-    <!-- ══ COLUMN 1 — MAIN GROUP ════════════════════════════════════════════ -->
-    <div>
-      <!-- Group header -->
-      <div style="background:var(--ky); color:#F5F0E8; padding:1rem 1.4rem; border-radius:5px 5px 0 0">
-        
-        <div style="font-size:1.05rem; font-weight:700; font-family:var(--serif); line-height:1.3">Yang, Michelle, Zoe, Sarah,<br>Ruth, Noah, Yeye &amp; Grandmama</div>
-        <div style="font-size:0.78rem; opacity:0.85; margin-top:0.2rem">9 passengers</div>
-      </div>
+    <!-- ╔══ ROW 1 — HEADERS ═══════════════════════════════════════════════════╗ -->
 
-      <!-- Outbound -->
-      <div style="background:white; border-left:1px solid var(--border); border-right:1px solid var(--border)">
-        <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--ky-mid); border-bottom:1px solid var(--border)">Outbound &ensp;·&ensp; Thursday 18 June 2026</div>
-        <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
-          <div>
-            <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">08:40</div>
-            <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Singapore (SIN)<br>Changi T3</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:var(--ky-mid); margin-bottom:0.4rem">SQ 620</div>
-            <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
-            <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">787-10 &middot; Economy<br>~7 hrs 30 min</div>
-          </div>
-          <div style="text-align:right">
-            <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">16:10</div>
-            <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Osaka Kansai (KIX)<br>Terminal 1</div>
-          </div>
-        </div>
-        <div style="padding:0.4rem 1.4rem; font-size:0.68rem; letter-spacing:0.1em; color:var(--gray-light); border-top:1px solid var(--border); text-align:center">Booking Reference: <strong style="color:var(--ink); letter-spacing:0.12em">EC42NU</strong></div>
-      </div>
-
-      <!-- Return -->
-      <div style="background:white; border:1px solid var(--border); border-top:none; margin-bottom:0">
-        <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--tk-mid); border-bottom:1px solid var(--border)">Return &ensp;·&ensp; Friday 26 June 2026</div>
-        <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
-          <div>
-            <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">19:00</div>
-            <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Tokyo Narita (NRT)<br>Terminal 1</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:var(--tk-mid); margin-bottom:0.4rem">SQ 011</div>
-            <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
-            <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">777-300ER &middot; Economy<br>~7 hrs 55 min</div>
-          </div>
-          <div style="text-align:right">
-            <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">00:55<sup style="font-size:1rem">+1</sup></div>
-            <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Singapore (SIN)<br>Arrives Sat 27 Jun</div>
-          </div>
-        </div>
-        <div style="padding:0.4rem 1.4rem; font-size:0.68rem; letter-spacing:0.1em; color:var(--gray-light); border-top:1px solid var(--border); text-align:center">Booking Reference: <strong style="color:var(--ink); letter-spacing:0.12em">EC378Y</strong></div>
-      </div>
-
-      <!-- Bottom border radius close -->
-      <div style="height:6px; background:white; border:1px solid var(--border); border-top:none; border-radius:0 0 5px 5px"></div>
+    <!-- Col 1 header — Main Group -->
+    <div style="background:var(--ky); color:#F5F0E8; padding:1rem 1.4rem; border-radius:5px 5px 0 0">
+      <div style="font-size:1.05rem; font-weight:700; font-family:var(--serif); line-height:1.3">Yang, Michelle, Zoe, Sarah,<br>Ruth, Noah, Yeye &amp; Grandmama</div>
+      <div style="font-size:0.78rem; opacity:0.85; margin-top:0.2rem">9 passengers</div>
     </div>
 
-
-    <!-- ══ COLUMN 2 — YIPOR TAN ══════════════════════════════════════════════ -->
-    <div>
-      <!-- Header -->
-      <div style="background:var(--tk); color:#F5F0E8; padding:1rem 1.4rem; border-radius:5px 5px 0 0">
-        
-        <div style="font-size:1.1rem; font-weight:700; font-family:var(--serif)">Yipor</div>
-        <div style="font-size:0.78rem; opacity:0.85; margin-top:0.2rem">Arrives Kyoto 2 days early</div>
-      </div>
-
-      <!-- Note strip -->
-      <div style="background:#EEE8DC; border-left:1px solid var(--border); border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:0.7rem 1.4rem">
-        <div style="font-size:0.72rem; color:var(--ink); line-height:1.6">
-          <span style="font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; font-weight:700; color:#9A8A70">Pre-trip</span><br>
-          Staying at <strong>Sora Niwa Terrace Kyoto</strong> before the group arrives.<br>
-          Joins group <strong>Fri 19 Jun</strong> at Celestine Gion. Departs <strong>Tue 23 Jun</strong> from KIX — group continues to Tokyo.
-        </div>
-      </div>
-
-      <!-- Outbound -->
-      <div style="background:white; border-left:1px solid var(--border); border-right:1px solid var(--border)">
-        <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--tk-mid); border-bottom:1px solid var(--border)">Outbound &ensp;·&ensp; Tuesday 16 June 2026</div>
-        <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
-          <div>
-            <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">08:40</div>
-            <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Singapore (SIN)<br>Changi T3</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:var(--tk-mid); margin-bottom:0.4rem">SQ 620</div>
-            <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
-            <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">787-10 &middot; Economy<br>~7 hrs 30 min</div>
-          </div>
-          <div style="text-align:right">
-            <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">16:10</div>
-            <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Osaka Kansai (KIX)<br>Terminal 1</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Return -->
-      <div style="background:white; border:1px solid var(--border); border-top:none">
-        <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--tk-mid); border-bottom:1px solid var(--border)">Return &ensp;·&ensp; Tuesday 23 June 2026</div>
-        <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
-          <div>
-            <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">17:25</div>
-            <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Osaka Kansai (KIX)<br>Terminal 1</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:var(--tk-mid); margin-bottom:0.4rem">SQ 621</div>
-            <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
-            <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">Economy<br>~7 hrs 30 min</div>
-          </div>
-          <div style="text-align:right">
-            <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">22:55</div>
-            <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Singapore (SIN)</div>
-          </div>
-        </div>
-      </div>
-      <div style="height:6px; background:white; border:1px solid var(--border); border-top:none; border-radius:0 0 5px 5px"></div>
+    <!-- Col 2 header — Yipor -->
+    <div style="background:var(--tk); color:#F5F0E8; padding:1rem 1.4rem; border-radius:5px 5px 0 0">
+      <div style="font-size:1.1rem; font-weight:700; font-family:var(--serif)">Yipor</div>
+      <div style="font-size:0.78rem; opacity:0.85; margin-top:0.2rem">Arrives Kyoto 2 days early</div>
     </div>
 
+    <!-- Col 3 header — Kay & Gracie -->
+    <div style="background:#9A8A70; color:#F5F0E8; padding:1rem 1.4rem; border-radius:5px 5px 0 0">
+      <div style="font-size:1.1rem; font-weight:700; font-family:var(--serif)">Kay &amp; Gracie</div>
+      <div style="font-size:0.78rem; opacity:0.85; margin-top:0.2rem">San Francisco (SFO) · 2 passengers</div>
+    </div>
 
-    <!-- ══ COLUMN 3 — KAY & GRACIE ═══════════════════════════════════════════ -->
-    <div>
-      <!-- Header -->
-      <div style="background:#9A8A70; color:#F5F0E8; padding:1rem 1.4rem; border-radius:5px 5px 0 0">
-        
-        <div style="font-size:1.1rem; font-weight:700; font-family:var(--serif)">Kay &amp; Gracie</div>
-        <div style="font-size:0.78rem; opacity:0.85; margin-top:0.2rem">Details to be confirmed</div>
+    <!-- ╔══ ROW 2 — OUTBOUND ══════════════════════════════════════════════════╗ -->
+
+    <!-- Col 1 outbound — SQ 620 · SIN → KIX · Thu 18 Jun -->
+    <div style="background:white; border-left:1px solid var(--border); border-right:1px solid var(--border)">
+      <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--ky-mid); border-bottom:1px solid var(--border)">Outbound &ensp;·&ensp; Thursday 18 June 2026</div>
+      <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
+        <div>
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">08:40</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Singapore (SIN)<br>Changi T3</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:var(--ky-mid); margin-bottom:0.4rem">SQ 620</div>
+          <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
+          <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">787-10 &middot; Economy<br>~7 hrs 30 min</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">16:10</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Osaka Kansai (KIX)<br>Terminal 1</div>
+        </div>
       </div>
+      <div style="padding:0.4rem 1.4rem; font-size:0.68rem; letter-spacing:0.1em; color:var(--gray-light); border-top:1px solid var(--border); text-align:center">Booking Reference: <strong style="color:var(--ink); letter-spacing:0.12em">EC42NU</strong></div>
+    </div>
 
-      <!-- Placeholder body -->
-      <div style="border:1px solid var(--border); border-top:none; border-radius:0 0 5px 5px; background:#FDFAF6">
-        <!-- Outbound placeholder -->
-        <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:#B0A090; border-bottom:1px solid var(--border)">Outbound</div>
-        <div style="padding:2.2rem 1.4rem; text-align:center; border-bottom:1px solid var(--border)">
-          <div style="font-size:2rem; color:#C4B9A8; margin-bottom:0.5rem">&#9992;</div>
-          <div style="font-size:0.82rem; color:#B0A090; font-style:italic">Flight details awaited</div>
+    <!-- Col 2 outbound — SQ 620 · SIN → KIX · Tue 16 Jun -->
+    <div style="background:white; border-left:1px solid var(--border); border-right:1px solid var(--border)">
+      <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--tk-mid); border-bottom:1px solid var(--border)">Outbound &ensp;·&ensp; Tuesday 16 June 2026</div>
+      <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
+        <div>
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">08:40</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Singapore (SIN)<br>Changi T3</div>
         </div>
+        <div style="text-align:center">
+          <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:var(--tk-mid); margin-bottom:0.4rem">SQ 620</div>
+          <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
+          <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">787-10 &middot; Economy<br>~7 hrs 30 min</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">16:10</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Osaka Kansai (KIX)<br>Terminal 1</div>
+        </div>
+      </div>
+      <div style="padding:0.4rem 1.4rem; font-size:0.68rem; letter-spacing:0.1em; color:var(--gray-light); border-top:1px solid var(--border); text-align:center">Booking Reference: <strong style="color:var(--ink); letter-spacing:0.12em">—</strong></div>
+    </div>
 
-        <!-- Return placeholder -->
-        <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:#B0A090; border-bottom:1px solid var(--border)">Return</div>
-        <div style="padding:2.2rem 1.4rem; text-align:center">
-          <div style="font-size:2rem; color:#C4B9A8; margin-bottom:0.5rem">&#9992;</div>
-          <div style="font-size:0.82rem; color:#B0A090; font-style:italic">Flight details awaited</div>
+    <!-- Col 3 outbound — UA 875 · SFO → HND · Wed 17 Jun -->
+    <div style="background:white; border-left:1px solid var(--border); border-right:1px solid var(--border)">
+      <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:#9A8A70; border-bottom:1px solid var(--border)">Outbound &ensp;·&ensp; Wednesday 17 June 2026</div>
+      <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
+        <div>
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">10:55</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">San Francisco (SFO)<br>Terminal 3</div>
         </div>
+        <div style="text-align:center">
+          <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:#9A8A70; margin-bottom:0.4rem">UA 875</div>
+          <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
+          <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">United Airlines · Economy<br>~11 hrs</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">13:55<sup style="font-size:1rem">+2</sup></div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Tokyo Haneda (HND)<br>Arrives Fri 19 Jun</div>
+        </div>
+      </div>
+      <div style="padding:0.4rem 1.4rem; font-size:0.68rem; letter-spacing:0.1em; color:var(--gray-light); border-top:1px solid var(--border); text-align:center">Booking Reference: <strong style="color:var(--ink); letter-spacing:0.12em">CC3SK2</strong></div>
+    </div>
+
+    <!-- ╔══ ROW 3 — RETURN ════════════════════════════════════════════════════╗ -->
+
+    <!-- Col 1 return — SQ 011 · NRT → SIN · Fri 26 Jun -->
+    <div style="background:white; border:1px solid var(--border); border-top:none">
+      <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--tk-mid); border-bottom:1px solid var(--border)">Return &ensp;·&ensp; Friday 26 June 2026</div>
+      <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
+        <div>
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">19:00</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Tokyo Narita (NRT)<br>Terminal 1</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:var(--tk-mid); margin-bottom:0.4rem">SQ 011</div>
+          <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
+          <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">777-300ER &middot; Economy<br>~7 hrs 55 min</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">00:55<sup style="font-size:1rem">+1</sup></div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Singapore (SIN)<br>Arrives Sat 27 Jun</div>
+        </div>
+      </div>
+      <div style="padding:0.4rem 1.4rem; font-size:0.68rem; letter-spacing:0.1em; color:var(--gray-light); border-top:1px solid var(--border); text-align:center">Booking Reference: <strong style="color:var(--ink); letter-spacing:0.12em">EC378Y</strong></div>
+    </div>
+
+    <!-- Col 2 return — SQ 621 · KIX → SIN · Tue 23 Jun -->
+    <div style="background:white; border:1px solid var(--border); border-top:none">
+      <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--tk-mid); border-bottom:1px solid var(--border)">Return &ensp;·&ensp; Tuesday 23 June 2026</div>
+      <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
+        <div>
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">17:25</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Osaka Kansai (KIX)<br>Terminal 1</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:var(--tk-mid); margin-bottom:0.4rem">SQ 621</div>
+          <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
+          <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">Singapore Airlines · Economy<br>~7 hrs 30 min</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">22:55</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Singapore (SIN)</div>
+        </div>
+      </div>
+      <div style="padding:0.4rem 1.4rem; font-size:0.68rem; letter-spacing:0.1em; color:var(--gray-light); border-top:1px solid var(--border); text-align:center">Booking Reference: <strong style="color:var(--ink); letter-spacing:0.12em">—</strong></div>
+    </div>
+
+    <!-- Col 3 return — ZG 53 · NRT → SIN · Fri 26 Jun -->
+    <div style="background:white; border:1px solid var(--border); border-top:none">
+      <div style="padding:0.45rem 1.4rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:#9A8A70; border-bottom:1px solid var(--border)">Return &ensp;·&ensp; Friday 26 June 2026</div>
+      <div style="display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:1.2rem 1.4rem; gap:0.75rem">
+        <div>
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">16:50</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Tokyo Narita (NRT)<br>Terminal 1</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:#9A8A70; margin-bottom:0.4rem">ZG 53</div>
+          <div style="font-size:1.6rem; color:var(--gray-light)">&#9992;</div>
+          <div style="font-size:0.65rem; color:var(--gray-light); letter-spacing:0.05em; margin-top:0.3rem">Zipair Tokyo · Economy<br>~7 hrs 10 min</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--serif); font-size:2.4rem; line-height:1; color:var(--ink)">23:00</div>
+          <div style="font-size:0.65rem; letter-spacing:0.1em; color:var(--gray); margin-top:0.25rem; text-transform:uppercase">Singapore (SIN)<br>Same day, Fri 26 Jun</div>
+        </div>
+      </div>
+      <div style="padding:0.4rem 1.4rem; font-size:0.68rem; letter-spacing:0.1em; color:var(--gray-light); border-top:1px solid var(--border); text-align:center">Booking Reference: <strong style="color:var(--ink); letter-spacing:0.12em">53CX8Z</strong></div>
+    </div>
+
+    <!-- ╔══ ROW 4 — CLOSING BARS ══════════════════════════════════════════════╗ -->
+    <div style="height:6px; background:white; border:1px solid var(--border); border-top:none; border-radius:0 0 5px 5px"></div>
+    <div style="height:6px; background:white; border:1px solid var(--border); border-top:none; border-radius:0 0 5px 5px"></div>
+    <div style="height:6px; background:white; border:1px solid var(--border); border-top:none; border-radius:0 0 5px 5px"></div>
+
+    <!-- ╔══ ROW 5 — YIPOR PRE-TRIP NOTE (cols 1 & 3 empty) ═══════════════════╗ -->
+    <div></div>
+    <div style="background:#EEE8DC; border:1px solid var(--border); border-top:none; border-radius:0 0 4px 4px; padding:0.65rem 1.4rem; margin-top:0.5rem">
+      <div style="font-size:0.72rem; color:var(--ink); line-height:1.6">
+        <span style="font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; font-weight:700; color:#9A8A70">Pre-trip note</span><br>
+        Staying at <strong>Sora Niwa Terrace Kyoto</strong> before the group arrives.<br>
+        Joins group <strong>Fri 19 Jun</strong> at Celestine Gion. Departs <strong>Tue 23 Jun</strong> from KIX — group continues to Tokyo.
       </div>
     </div>
+    <div></div>
 
   </div><!-- end grid -->
 </div><!-- end wrap -->
@@ -598,8 +621,8 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
       <tr onclick="document.getElementById('d2').scrollIntoView({behavior:'smooth'})" title="Go to Day 2">
         <td class="tc-daynum">Day 2</td>
         <td class="tc-date">Fri 19 Jun</td>
-        <td class="tc-theme">Nishiki Market — Yipor joins group today
-          <div class="tc-trn">Yipor arrives Celestine Gion from Sora Niwa Terrace · Walk to market 10 min</div>
+        <td class="tc-theme">Nishiki Market — Yipor, Kay &amp; Gracie join today
+          <div class="tc-trn">Kay &amp; Gracie arrive HND 13:55 (UA 875) · Transfer to Kyoto by afternoon · Yipor arrives Celestine Gion from Sora Niwa Terrace</div>
         </td>
         <td class="tc-theme">Kiyomizudera + Ninenzaka &amp; Sannenzaka
           <div class="tc-trn">Taxi to Kiyomizudera ¥1,000</div>
@@ -609,13 +632,13 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
       <tr onclick="document.getElementById('d3').scrollIntoView({behavior:'smooth'})" title="Go to Day 3">
         <td class="tc-daynum">Day 3</td>
         <td class="tc-date">Sat 20 Jun</td>
-        <td class="tc-theme">Arashiyama — Bamboo Grove &amp; Monkey Park
-          <div class="tc-trn">JR Sagano ¥240 · 15 min · Optional Hozugawa Cruise ¥4,100 · Last Kameoka departure 15:00 (arrives Arashiyama ~17:00)</div>
+        <td class="tc-theme">Arashiyama — Bamboo Grove &amp; Tenryu-ji (finish by 13:00)
+          <div class="tc-trn">JR Sagano ¥240 · 15 min · Optional Hozugawa Cruise ¥4,100 · Lunch at Arashiyama 12:00–13:00, then taxi to Ryoan-ji</div>
         </td>
-        <td class="tc-theme">Kinkaku-ji — Golden Pavilion
-          <div class="tc-trn">Bus or taxi ¥800</div>
+        <td class="tc-theme">Ryoan-ji (13:30) → Kinkaku-ji (15:15, closes 17:00)
+          <div class="tc-trn">Arashiyama → Ryoan-ji: Taxi ¥2,200 · Ryoan-ji → Kinkaku-ji: Taxi ¥900</div>
         </td>
-        <td><span class="tc-dinner-lbl">Dinner</span><a href="https://tabelog.com/kyoto/A2601/A260301/26010018/" target="_blank">Pontocho Izumoya · Unagi</a></td>
+        <td><span class="tc-dinner-lbl">Dinner</span><a href="https://tabelog.com/kyoto/A2601/A260301/26010018/" target="_blank">Pontocho Izumoya · Unagi</a> <span style="font-size:0.7em; color:#9A8A70">(19:00)</span></td>
       </tr>
       <tr onclick="document.getElementById('d4').scrollIntoView({behavior:'smooth'})" title="Go to Day 4">
         <td class="tc-daynum">Day 4</td>
@@ -884,7 +907,7 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
         <div class="act-block">
           <div><span class="act-lbl am">Note</span></div>
           <div class="act-name">Kay, Gracie &amp; Yipor Join Today</div>
-          <p class="act-desc">Kay and Gracie arrive and check in at Celestine Gion. Yipor also joins — she will be with the group for Days 2, 3, and 4. When the group departs for Tokyo on Day 5, Yipor stays on independently in Kyoto until her own flight home on Tuesday 23 June (SQ621, 17:25 from KIX).</p>
+          <p class="act-desc">Kay and Gracie arrive Tokyo Haneda (HND) at 13:55 on UA 875. They transfer directly to Kyoto — either by airport limousine bus (~3.5 hrs, ¥3,800, direct to Kyoto Station) or by shinkansen from Shinagawa (~2 hrs 20 min, ¥13,870) — and check in at Celestine Gion by evening. Yipor also joins — she will be with the group for Days 2, 3, and 4. When the group departs for Tokyo on Day 5, Yipor stays on independently in Kyoto until her own flight home on Tuesday 23 June (SQ621, 17:25 from KIX).</p>
         </div>
       </div>
     </div>
@@ -901,7 +924,7 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
       <div class="day-num-big">3</div>
       <div class="day-head-meta">
         <div class="day-date-str">Saturday, 20 June</div>
-        <div class="day-headline">Arashiyama &amp; Kinkaku-ji</div>
+        <div class="day-headline">Arashiyama, Ryoan-ji &amp; Kinkaku-ji</div>
       </div>
       <div class="day-city-tag">Kyoto</div>
     </div>
@@ -931,7 +954,7 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
           <p class="act-desc">Tenryu-ji's famous garden frames Arashiyama mountain as its backdrop — a masterpiece of borrowed scenery. The flat garden paths are stroller and wheelchair accessible. Then stroll the riverside and cross the iconic Togetsukyo moon-crossing bridge.</p>
         </div>
         <div class="act-block">
-          <div><span class="act-lbl lunch">Lunch</span><span class="act-time">12:30 – 14:00</span></div>
+          <div><span class="act-lbl lunch">Lunch</span><span class="act-time">12:00 – 13:00</span></div>
           <div class="act-name">Shoraian or Arashiyama riverside</div>
           <div class="act-type">Traditional restaurant &nbsp;·&nbsp; Tofu cuisine &nbsp;·&nbsp; Yudofu</div>
           <p class="act-desc">Kyoto is famous for yudofu (simmered tofu) and Arashiyama has superb options along the Oi River. Shoraian serves classic Kyoto tofu sets in a historic riverside setting.</p>
@@ -939,18 +962,29 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
       </div>
       <div class="day-col">
         <div class="act-block trn-block">
-          <div><span class="act-lbl" style="background:#9A8A70">Transport</span><span class="act-time">~13:30 → 14:00</span></div>
-          <div class="trn-name">🚕 Taxi Convoy — Arashiyama → Kinkaku-ji</div>
-          <div class="trn-detail">~25 min · ¥2,200 per taxi · Book 2–3 taxis (pre-arrange at Arashiyama lunch restaurant) · No direct train; taxi is the practical choice for a group &nbsp;·&nbsp; Alternative: Kyoto City Bus #59 from Togetsukyo → Kinkakuji-michi ~40 min · ¥230/person</div>
+          <div><span class="act-lbl" style="background:#9A8A70">Transport</span><span class="act-time">~13:00 → 13:30</span></div>
+          <div class="trn-name">🚕 Taxi Convoy — Arashiyama → Ryoan-ji</div>
+          <div class="trn-detail">~25 min · ¥2,200 per taxi · Book 2–3 taxis (pre-arrange at Arashiyama lunch restaurant) · No direct bus; taxi is the practical choice for a group of this size</div>
         </div>
         <div class="act-block">
-          <div><span class="act-lbl pm">Afternoon</span><span class="act-time">14:00 – 17:00</span></div>
+          <div><span class="act-lbl pm">Afternoon</span><span class="act-time">13:30 – 15:00</span></div>
+          <div class="act-name"><a href="https://www.ryoanji.jp/smph/eng/" target="_blank">Ryoan-ji — The Rock Garden</a></div>
+          <div class="act-type">UNESCO World Heritage &nbsp;·&nbsp; ¥600 entry &nbsp;·&nbsp; Closes 17:30 (Jun) &nbsp;·&nbsp; Taxi 25 min from Arashiyama</div>
+          <p class="act-desc">The world's most celebrated Zen rock garden — fifteen stones arranged in raked white gravel, never all visible at once. The surrounding pond circuit (Kyoyochi) is flat and fully accessible, and the wooded grounds are serene even in peak season. Allow 1–1.5 hrs. Closes 17:30 in June; no rush.</p>
+        </div>
+        <div class="act-block trn-block">
+          <div><span class="act-lbl" style="background:#9A8A70">Transport</span><span class="act-time">~15:00 → 15:15</span></div>
+          <div class="trn-name">🚕 Taxi — Ryoan-ji → Kinkaku-ji</div>
+          <div class="trn-detail">~10 min · ¥900 per taxi · The two temples are neighbours in NW Kyoto — easiest short hop of the day</div>
+        </div>
+        <div class="act-block">
+          <div><span class="act-lbl pm">Afternoon</span><span class="act-time">15:15 – 17:00</span></div>
           <div class="act-name">Kinkaku-ji — The Golden Pavilion</div>
-          <div class="act-type">UNESCO World Heritage &nbsp;·&nbsp; ¥500 entry &nbsp;·&nbsp; Taxi 25 min from Arashiyama</div>
-          <p class="act-desc">Japan's most photographed building shimmers gold over a mirror-still pond. Arrive at 2pm when morning crowds have thinned. The one-way garden walk (30–40 min) is flat and fully accessible. The reflection in the pond is utterly breathtaking.</p>
+          <div class="act-type">UNESCO World Heritage &nbsp;·&nbsp; ¥500 entry &nbsp;·&nbsp; Closes 17:00 sharp &nbsp;·&nbsp; Taxi 10 min from Ryoan-ji</div>
+          <p class="act-desc">Japan's most photographed building shimmers gold over a mirror-still pond. Afternoon light turns the gilded pavilion warm — the reflection in the pond is utterly breathtaking. The one-way garden walk (30–40 min) is flat and fully accessible. Plan to exit by 16:50; gates close at 17:00.</p>
         </div>
         <div class="act-block">
-          <div><span class="act-lbl dinner">Dinner</span></div>
+          <div><span class="act-lbl dinner">Dinner</span><span class="act-time">19:00</span></div>
           <div class="act-name">Pontocho Izumoya &amp; Unagi Evening</div>
           <div class="act-type">Bib Gourmand &nbsp;·&nbsp; Unagi (Eel) Specialist &nbsp;·&nbsp; Pontocho</div>
           <p class="act-desc">Izumoya is one of Pontocho's most celebrated unagi (freshwater eel) restaurants. Kabayaki-style grilled eel over rice — a quintessential Japanese dining experience. The restaurant has been serving this dish for generations. Book well ahead; request a kawayuka riverside terrace table if available in June.</p>
@@ -963,7 +997,7 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
         </div>
       </div>
     </div>
-    <div class="day-foot">&#8594;&ensp; Hotel → Arashiyama: Taxi ~¥3,000 (30 min) &ensp;·&ensp; Arashiyama → Kinkaku-ji: Taxi ~¥2,200 (25 min) &ensp;·&ensp; Return: Taxi to hotel ~¥1,500</div>
+    <div class="day-foot">&#8594;&ensp; Hotel → Arashiyama: Taxi ~¥3,000 (30 min) &ensp;·&ensp; Arashiyama → Ryoan-ji: Taxi ~¥2,200 (25 min) &ensp;·&ensp; Ryoan-ji → Kinkaku-ji: Taxi ~¥900 (10 min) &ensp;·&ensp; Return to hotel ~19:30 before dinner: Taxi ~¥1,500</div>
   </div>
 </div>
 
@@ -1471,7 +1505,7 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
         <div class="act-block trn-block">
           <div><span class="act-lbl" style="background:#9A8A70">Transport</span><span class="act-time">Afternoon</span></div>
           <div class="trn-name">🚂 Narita Express (N&#8217;EX) — Tokyo Station → Narita Airport T1</div>
-          <div class="trn-detail">~60 min · ¥3,070/person · Dep. ~14:30 for 19:00 flight · Book group seats in advance</div>
+          <div class="trn-detail">~60 min · ¥3,070/person · <strong>Kay &amp; Gracie dep. ~12:30</strong> for ZG 53 at 16:50 · <strong>Main group dep. ~14:30</strong> for SQ 011 at 19:00 · Book group N'EX seats in advance</div>
         </div>
         <div class="act-block">
           <div><span class="act-lbl am">Free Morning</span><span class="act-time">08:00 – 12:00</span></div>
@@ -1489,7 +1523,7 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
         </div>
       </div>
     </div>
-    <div class="day-foot">&#8594;&ensp; Hotel stores luggage until departure &ensp;·&ensp; N&#8217;EX: Tokyo Station → Narita · 60 min · ¥3,070/person &ensp;·&ensp; Check-in closes 90 min before departure &ensp;·&ensp; SQ011 departs 19:00</div>
+    <div class="day-foot">&#8594;&ensp; Hotel stores luggage until departure &ensp;·&ensp; N&#8217;EX: Tokyo Station → Narita · 60 min · ¥3,070/person &ensp;·&ensp; Kay &amp; Gracie: ZG 53 departs 16:50 (leave hotel ~12:30) &ensp;·&ensp; Main group: SQ 011 departs 19:00 (leave hotel ~14:30)</div>
   </div>
 </div>
 
@@ -1543,14 +1577,13 @@ footer { background: var(--ink); color: var(--gray); text-align: center; padding
     <div style="border:1px solid var(--border); border-radius:4px; overflow:hidden">
       <div style="background:var(--ky); color:white; padding:0.65rem 1.1rem; display:flex; align-items:baseline; gap:0.8rem">
         <span style="font-family:var(--serif); font-size:1.15rem; font-weight:700">Day 3</span>
-        <span style="font-size:0.68rem; opacity:0.8; letter-spacing:0.1em; text-transform:uppercase">Sat 20 Jun · Arashiyama + Kinkaku-ji</span>
+        <span style="font-size:0.68rem; opacity:0.8; letter-spacing:0.1em; text-transform:uppercase">Sat 20 Jun · Arashiyama + Ryoan-ji + Kinkaku-ji</span>
       </div>
       <div style="padding:1rem 1.1rem; font-size:0.84rem; color:var(--ink); line-height:1.7">
         <p style="margin:0 0 0.5rem; color:#9A8A70; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700">Instead of: Bamboo Grove on foot</p>
         <ul style="margin:0; padding-left:1.1rem; color:var(--gray)">
           <li><strong>Sagano Romantic Train (嵯峨野トロッコ)</strong> — the 25-min scenic railway through the Oi River gorge; perfect for Grandmama &amp; Yeye. ¥880/person; <strong>book ahead</strong> at <a href="https://www.sagano-kanko.co.jp/en/" target="_blank" style="color:inherit">sagano-kanko.co.jp</a>. Departs Saga-Torokko Station.</li>
-          <li><strong>Ryoan-ji (龍安寺)</strong> — the world's most famous rock garden, with a beautiful pond circuit; less crowded than Kinkaku-ji in the afternoon. 15 min taxi from Kinkaku-ji area.</li>
-          <li><strong>Nishiki / Teramachi shopping</strong> — for those who've had their temple fill, Teramachi's antique and craft shops are a rewarding afternoon alternative.</li>
+          <li><strong>Nishiki / Teramachi shopping</strong> — for those who've had their temple fill, Teramachi's antique and craft shops are a rewarding afternoon alternative. <em>Note: Ryoan-ji is now part of the main itinerary after Arashiyama.</em></li>
         </ul>
       </div>
     </div>
